@@ -43,55 +43,20 @@
 	font-size: 1.4rem;
 }
 
-.box-between {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	   -moz-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
-	-webkit-box-pack: justify;
-	-webkit-justify-content: space-between;
-	   -moz-box-pack: justify;
-	    -ms-flex-pack: justify;
-	        justify-content: space-between;
-}
-
-.text--align-c {
-	text-align: center;
-}
-
-input,
-select,
-.form-control {
+input, .input-group--text input {
 	display: inline-block;
 	width: 100%;
-	height: 4.4rem;
+	height: 44px;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-	opacity: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 1.6rem;
-	height: 1.6rem;
-	border: 0;
-}
-
-.form-control:focus {
+.input-group input:focus {
 	border-color: #3bf;
 	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
-.form-control--default {
+.input-group--text input {
 	font-size: 1.4rem;
 	border: 1px solid #ccc;
 	padding: 0 10px;
@@ -103,55 +68,7 @@ input[type="radio"] {
 	        border-radius: 6px;
 }
 
-.checkbox {
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-flex-wrap: wrap;
-	    -ms-flex-wrap: wrap;
-	        flex-wrap: wrap;
-	position: relative;
-	padding: 0 0 0 2.8rem;
-	margin: 0.8rem 0;
-}
-
-.checkbox .checkbox__input:checked + .checkbox__label:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: #0077b3;
-	border-color: #3bf;
-	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-}
-
-.checkbox .checkbox__label {
-	cursor: pointer;
-}
-
-.checkbox .checkbox__label:before, .checkbox .checkbox__label:after {
-	content: "";
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 2rem;
-	height: 2rem;
-	-webkit-border-radius: 2px;
-	   -moz-border-radius: 2px;
-	        border-radius: 2px;
-	border: 1px solid #ccc;
-	background: #fff;
-}
-
 .form .input-row__tit {
-	color: #777;
-}
-
-.form .input-row__tit--between {
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
@@ -167,6 +84,7 @@ input[type="radio"] {
 	   -moz-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
+	color: #777;
 }
 
 .form .input-row__tit + .input-row__cont {
@@ -175,50 +93,6 @@ input[type="radio"] {
 
 .form .input-row + .input-row {
 	margin-top: 20px;
-}
-
-/*
-    user-select: auto | all | none | text;
-    auto : Default값으로 브라우저 허용시 텍스트 선택 가능
-    all : 더블클릭이 아닌 클릭 만으로도 선택이 가능
-    none : 텍스트 선택 안됨
-    text : 텍스트 선택이 가능
-
-    touch-action: auto; // 기본 값
-    touch-action: none; //브라우저가 모든 터치 이벤트를 무시하도록 설정
-    touch-action: pan-x; //특정 축으로의 터치를 사용한 스크롤 허용 
-    touch-action: pan-y;
-    touch-action: pan-left; //특정 방향으로의 터치를 사용한 스크롤 허용 
-    touch-action: pan-right;
-    touch-action: pan-up;
-    touch-action: pan-down;
-    touch-action: pinch-zoom; // 핀치 줌(여러 손가락을 사용한 확대/축소) 허용
-    touch-action: manipulation; //터치를 사용한 스크롤, 핀치 줌만 허용하고 그 외 비표준 동작 (더블 탭으로 확대 등) 불허용
-    touch-action: pan-y pinch-zoom; //동시에 여러 값 지정 가능
-*/
-.btn {
-	display: inline-block;
-	font-weight: 400;
-	text-align: center;
-	vertical-align: middle;
-	-ms-touch-action: manipulation;
-	    touch-action: manipulation;
-	cursor: pointer;
-	white-space: nowrap;
-	padding: 0.8rem 1.6rem;
-	font-size: 1.4rem;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-	        border-radius: 4px;
-	-webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-}
-
-.btn--primary {
-	color: #fff;
-	background-color: #0077b3;
 }
 
 /*# sourceMappingURL=../maps/modules.css.map */

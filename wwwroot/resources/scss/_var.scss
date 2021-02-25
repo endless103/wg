@@ -9,20 +9,18 @@ $border-color: #ccc;
 $border-color-blue: #3bf;
 $bg-color-light-gray: #f5f5f5;
 $bg-color-white: #fff;
-$bg-color-blue: #0077b3;
 
 /* size */
-$layout-size-xs: 48rem;
-$layout-size-sm: 76.8rem;
-$layout-size: 128rem;
-$layout-size-lg: 192rem;
+$layout-size-small: 40.625vw; //520px;
+$layout-size-medium: 768px;
+$layout-size-large: 1280px;
 
 $font-size: 1rem;
 $font-size-medium: 2.4rem;
 $font-size-large: 3.2rem;
 
 /* space */
-$space: 2rem;
-$space-x2: 4rem;
-$space-x3: 6rem;
-$space-x4: 8rem;
+$space: 20px;
+$space-x2: 40px;
+$space-x3: 60px;
+$space-x4: 80px;

@@ -12,17 +12,16 @@ body {
   .wrap__inner {
   }
 
-  //로그인
+  //sign in
   &--sign {
     //@extend .wrap;
     @include Align-middle;
 
     .wrap__inner {
       position: relative;
-      width: 100%;
-      max-width: $layout-size-xs;
+      width: $layout-size-small;
+      max-width: 480px;
       padding: $space-x2;
-      margin: 0 $space;
       border-top: 2px solid $main-color;
       background-color: $bg-color-white;
       box-sizing: border-box;
@@ -32,10 +31,6 @@ body {
         $blur: 8px,
         $color: rgba(0, 0, 0, 0.12)
       );
-
-      .login-box {
-        margin: $space-x2 0 $space;
-      }
     }
 
     .header {
@@ -70,12 +65,6 @@ body {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         background-color: $main-color;
-      }
-    }
-    .form {
-      &__footer {
-        border-top: 1px solid $bg-color-light-gray;
-        padding-top: $space;
       }
     }
     .footer {
