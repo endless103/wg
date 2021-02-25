@@ -48,19 +48,17 @@
                     <div class="from__cont">
                         <div class="input-row">
                             <div class="input-row__tit">
-                                <label for="userName">
+                                <label for="userName" class="input-row__text">
                                     이름<span class="hidden">을 입력해주세요.</span>
                                 </label>
                             </div>
                             <div class="input-row__cont">
-                                <div class="input-group input-group--text">
-                                    <input type="text" id="userName" placeholder="e.g.) 홍길동">
-                                </div>
+                                <input type="text" id="userName" placeholder="e.g.) 홍길동" class="form-control form-control--default">
                             </div>
                         </div>
                         <div class="input-row">
-                            <div class="input-row__tit">
-                                <label for="userPw" class="input-row__tit">
+                            <div class="input-row__tit input-row__tit--between">
+                                <label for="userPw" class="input-row__text">
                                     비밀번호<span class="hidden">를 입력해주세요.</span>
                                 </label>
                                 <a href="javascript:;" class="link link--small">
@@ -68,18 +66,16 @@
                                 </a>
                             </div>
                             <div class="input-row__cont">
-                                <div class="input-group input-group--text">
-                                    <input type="password" id="userPw" maxlength="14" placeholder="e.g.) 숫자 + 영문 + 특수기호 조합의 비밀번호">
-                                </div>
+                                <input type="password" id="userPw" class="form-control form-control--default" maxlength="14" placeholder="e.g.) 숫자 + 영문 + 특수기호 조합의 비밀번호">
                             </div>
                         </div>
-                        <div class="box box--between">
-                            <div class="chk-form">
-                                <input type="checkbox" id="chk01">
-                                <label for="chk01">로그인 상태 유지</label>                                
+                        <div class="box-between login-box">
+                            <div class="checkbox checkbox--default">
+                                <input type="checkbox" id="checkboxExample1" class="checkbox__input">
+                                <label for="checkboxExample1" class="checkbox__label">로그인 상태 유지</label>                                
                             </div>
                             <div class="btns">
-                                <button type="submit" class="btn">Sign In</button>
+                                <button type="submit" class="btn btn--primary">로그인</button>
                             </div>
                         </div>
                     </div>

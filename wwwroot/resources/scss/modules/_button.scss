@@ -1,0 +1,37 @@
+/*
+    user-select: auto | all | none | text;
+    auto : Default값으로 브라우저 허용시 텍스트 선택 가능
+    all : 더블클릭이 아닌 클릭 만으로도 선택이 가능
+    none : 텍스트 선택 안됨
+    text : 텍스트 선택이 가능
+
+    touch-action: auto; // 기본 값
+    touch-action: none; //브라우저가 모든 터치 이벤트를 무시하도록 설정
+    touch-action: pan-x; //특정 축으로의 터치를 사용한 스크롤 허용 
+    touch-action: pan-y;
+    touch-action: pan-left; //특정 방향으로의 터치를 사용한 스크롤 허용 
+    touch-action: pan-right;
+    touch-action: pan-up;
+    touch-action: pan-down;
+    touch-action: pinch-zoom; // 핀치 줌(여러 손가락을 사용한 확대/축소) 허용
+    touch-action: manipulation; //터치를 사용한 스크롤, 핀치 줌만 허용하고 그 외 비표준 동작 (더블 탭으로 확대 등) 불허용
+    touch-action: pan-y pinch-zoom; //동시에 여러 값 지정 가능
+*/
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  white-space: nowrap;
+  padding: 0.8rem 1.6rem;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  user-select: none;
+
+  &--primary {
+    color: #fff;
+    background-color: $bg-color-blue;
+  }
+}
