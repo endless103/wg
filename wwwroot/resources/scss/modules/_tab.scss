@@ -1,0 +1,39 @@
+.tab{
+	&-nav{
+		> ul {
+			width: 100%;
+			@include Align-box;
+			
+			> li {
+				button {
+					@include Align-middle;
+					height: 95px;
+					width: 100%;
+					border-bottom: 1px solid #e7e7e7;
+					font-size:24px;
+				}
+				&.active {
+					button {
+						color: #ff3f4c;
+						@include Bold;
+						border-bottom: .3rem solid #ff3f4c;
+					}
+				}
+			}
+			&.tab-col2 > li {
+				width: 50%;
+			}
+			&.tab-col3 > li {
+				width: 33.333%;
+			}
+			&.tab-col4 > li {
+				width: 25%;
+			}
+			&.tab-col5 > li {
+				width: 20%;
+			}
+		}
+		
+	}
+}
+

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>더블유게임즈 어드민</title>
+
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./../resources/styles/reset.css">
+    <link rel="stylesheet" href="./../resources/styles/layout.css">
+    <link rel="stylesheet" href="./../resources/styles/modules.css">
+    <link rel="stylesheet" href="./../resources/styles/contents.css">
+
+    <script src="./../resources/scripts/jquery/jquery-1.9.1.min.js"></script>
+    <script src="./../resources/scripts/jquery/jquery-ui.min.js"></script>
+    <script src="./../resources/scripts/jquery/plugins/slick.min.js"></script>
+    <script src="./../resources/scripts/jquery/plugins/swiper.min.js"></script>
+    <script src="./../resources/scripts/jquery/plugins/iscroll.min.js"></script>
+    <script src="./../resources/scripts/MUI.js"></script>
+    <script src="./../resources/scripts/common.js"></script>
+
+
+</head>
+<body>
+    <!-- sign in -->
+    <div class="wrap wrap--sign">
+        <div class="wrap__inner">       
+            <!-- 헤더 -->     
+            <header class="header">
+                <div class="header__inner">
+                    <a href="javascript:;" class="logo">
+                        <img src="./../resources/images/common/logo.png" alt="">
+                        <div class="logo__text">
+                            DOUBLEU GAMES
+                            <span>admin</span>
+                        </div>
+                    </a>
+                    <h1>SIGN IN</h1>
+                </div>
+            </header>
+            <!-- //헤더 -->  
+
+            <!-- 주요 컨텐츠 -->            
+            <main class="container">
+                <form action="" class="form">
+                    <div class="from__cont">
+                        <div class="input-row">
+                            <div class="input-row__tit">
+                                <label for="userName">
+                                    이름<span class="hidden">을 입력해주세요.</span>
+                                </label>
+                            </div>
+                            <div class="input-row__cont">
+                                <div class="input-group input-group--text">
+                                    <input type="text" id="userName" placeholder="e.g.) 홍길동">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-row">
+                            <div class="input-row__tit">
+                                <label for="userPw" class="input-row__tit">
+                                    비밀번호<span class="hidden">를 입력해주세요.</span>
+                                </label>
+                                <a href="javascript:;" class="link link--small">
+                                   비밀번호를 잊으셨나요?
+                                </a>
+                            </div>
+                            <div class="input-row__cont">
+                                <div class="input-group input-group--text">
+                                    <input type="password" id="userPw" maxlength="14" placeholder="e.g.) 숫자 + 영문 + 특수기호 조합의 비밀번호">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box box--between">
+                            <div class="chk-form">
+                                <input type="checkbox" id="chk01">
+                                <label for="chk01">로그인 상태 유지</label>                                
+                            </div>
+                            <div class="btns">
+                                <button type="submit" class="btn">Sign In</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <p class="text text--align-c">
+                            아직 회원이 아니신가요? <a href="" class="link link--small">회원가입하러 가기!</a>
+                        </p>
+                    </div>
+                </form>
+            </main>
+            <!-- //주요 컨텐츠 -->
+
+            <!-- 푸터 -->     
+            <footer class="footer">
+                <div class="footer__inner">
+                    <p class="text text--align-c">&copy; Copyright 2021. All rights reserved. </p>
+                </div>
+            </footer>
+            <!-- //푸터 -->     
+        </div>
+    </div>
+    <!-- //sign in -->
+</body>
+</html>
