@@ -309,3 +309,15 @@ $extra-small-devices: 320px;
     font-size: 1.4rem;
   }
 }
+
+.box {
+  &-between {
+    @include Align-between;
+  }
+}
+
+.text {
+  &--align-c {
+    text-align: center;
+  }
+}
