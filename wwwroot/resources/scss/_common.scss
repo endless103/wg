@@ -1,0 +1,311 @@
+$medium-devices: 768px;
+$small-devices: 480px;
+$extra-small-devices: 320px;
+
+@mixin Clear {
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+@mixin Normal {
+  font-family: "ManropeL", "NotoL", serif; /*font-family:"SpoqaL", serif;*/ /*font-family:"SpoqaHanSansL", serif;*/
+  font-weight: normal;
+}
+@mixin Regular {
+  font-family: "ManropeR", "NotoR", serif; /*font-family: "SpoqaR", serif;*/ /*font-family: "SpoqaHanSansR", serif;*/
+  font-weight: normal;
+}
+@mixin Bold {
+  font-family: "ManropeB", "NotoB", serif; /*font-family: "SpoqaB", serif;*/ /*font-family: "SpoqaHanSansB", serif;*/
+  font-weight: normal;
+}
+
+@mixin NoscrollBar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin Vertical-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@mixin Align-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin Align-middle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin Align-middle-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+}
+@mixin Align-middle-left-column {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-flow: column;
+}
+@mixin Align-middle-right-column {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-flow: column;
+}
+@mixin Align-top-column {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-flow: column;
+}
+@mixin Align-top-left-column {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+}
+@mixin Align-top-right-column {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+@mixin Align-middle-left {
+  display: flex;
+  align-items: center;
+}
+@mixin Align-middle-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+@mixin Align-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@mixin Align-top-left {
+  display: flex;
+  align-items: flex-start;
+  justify-content: left;
+}
+@mixin Align-bottom-middle {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+@mixin Align-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin Align-between-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+@mixin Align-between-base {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@mixin Inline-align-middle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin Inline-align-top {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+@mixin Inline-align-top-left-flex-wrap {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*인라인 가로스크롤*/
+@mixin Inline-scrolling {
+  box-sizing: border-box;
+  font-size: 0;
+  overflow-x: visible;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  padding-bottom: 0.2rem;
+}
+
+/*폰트만 삭제시킴*/
+@mixin Hide_txt {
+  font: 0/0 a;
+}
+
+/*투명도 믹스인*/
+@mixin Opacity($opacity) {
+  opacity: $opacity; /* All modern browsers */
+  $opacityIE: $opacity * 100;
+  filter: alpha(opacity=$opacityIE); /* For IE5~IE9 */
+}
+
+/*포지션 믹스인*/
+//@include Position($top: 0, $left: 0)
+@mixin Position(
+  $position: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+/*백그라운드 믹스인*/
+//@include Background($sprite:'error', $type:'png', $position:right center); ---  사용법
+//@include Background($sprite:'error', $type:'jpg', $y:0); ---  사용법
+//@include Background($sprite:'error', $type:'jpg', $position:20% 20%, $size:100%); ---  사용법
+@mixin Background(
+  $sprite,
+  $type: "png",
+  $position: 0 0,
+  $size: auto,
+  $path: "icons"
+) {
+  background-repeat: no-repeat;
+  background-image: url("../../resources-pc/images/#{$path}/#{$sprite}.#{$type}");
+  background-position: $position;
+  background-size: $size;
+}
+
+/* 말줄임표 */
+// 인자 값의 기본 값은 1
+// @include Ellipsis($w:100px, $lines:2); --- 사용법
+@mixin Ellipsis($w: 100%, $lines: 1, $display: block) {
+  @if ($lines == 1) {
+    width: $w;
+    display: $display;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    width: $w;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+  }
+}
+
+//커스텀 스크롤바
+@mixin CustumScroll($minus: 5px) {
+  &::-webkit-scrollbar {
+    width: 17px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #e1e1e1;
+    border: $minus solid transparent;
+    background-clip: content-box;
+    border-radius: 15px;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: #fafafa;
+    border: $minus solid transparent;
+    background-clip: content-box;
+    border-radius: 15px;
+  }
+  scrollbar-base-color: #e1e1e1;
+  scrollbar-face-color: #e1e1e1;
+  scrollbar-3dlight-color: #e1e1e1;
+  scrollbar-highlight-color: #e1e1e1;
+  scrollbar-track-color: #fafafa;
+  scrollbar-arrow-color: #fafafa;
+  scrollbar-shadow-color: #fafafa;
+  scrollbar-darkshadow-color: #fafafa;
+}
+
+/*미디어쿼리 믹스인*/
+//@include media( $queryPoint: "(max-width:480px)" ){
+//width : 50%;
+//}
+@mixin media($queryPoint) {
+  @media #{ $queryPoint } {
+    @content;
+  }
+}
+
+//@include box-shadow($top:0, $left:0px, $blur:15px, $color:rgba(50, 50, 50, 0.75));
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $color;
+    -moz-box-shadow: inset $top $left $blur $color;
+    box-shadow: inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+/*
+	BEM 클래스 이름에는 최대 세 부분이 포함됩니다.
+
+	블록 : 구성 요소의 가장 바깥 쪽 부모 요소가 블록으로 정의됩니다.
+	요소 : 구성 요소 내부에는 요소라고하는 하나 이상의 자식이있을 수 있습니다.
+	수정 자 : 블록 또는 요소는 수정 자로 표시되는 변형을 가질 수 있습니다.
+	세 가지 모두 이름에 사용되는 경우 다음과 같이 표시됩니다.
+	- 수정 자 클래스를 단독으로 사용하지 마십시오. 수정 자 클래스는 기본 클래스를 대체하는 것이 아니라 확장하기위한 것입니다.
+
+	[block]__[element]--[modifier]
+*/
+
+*[class].hidden {
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+@mixin square($size, $radius: 0) {
+  width: $size;
+  height: $size;
+
+  @if $radius != 0 {
+    border-radius: $radius;
+  }
+}
+
+.link {
+  color: $text-color-blue;
+  text-decoration: underline;
+
+  &--small {
+    @extend .link;
+    font-size: 1.4rem;
+  }
+}
